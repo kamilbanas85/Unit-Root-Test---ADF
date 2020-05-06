@@ -1,5 +1,6 @@
 install.packages('fUnitRoots')
 install.packages('dynlm')
+install.packages('TSstudio')
 library(dynlm)
 
 
