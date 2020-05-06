@@ -1,0 +1,76 @@
+install.packages('fUnitRoots')
+
+
+
+CreateModel <- function(x, k = 0, int = TRUE, trend = FALSE, printModel = FALSE){
+  # NB:  returns conventional lm summary so p-values for adf test are wrong!
+  require(dynlm)
+  dx <- diff(x)
+  formula <- paste("dx ~ L(x)")
+  if(k > 0)
+    formula <- paste0(formula," + L(dx,1:",k,")")
+  if(trend){
+    s <- time(x)
+    t <- ts(s - s[1],start = s[1],freq = frequency(x))
+    formula <- paste0(formula," + t")
+  }
+  if(!int) formula <- paste0(formula," - 1")
+  
+  if(printModel){print(formula)}
+  dynlm(as.formula(formula))
+}
+
+########################################################
+
+ADFUnitRoot <- function(x, 
+                        MaxLag = 10, 
+                        type = "ct", 
+                        plotBIC = TRUE){
+  
+
+  TimeSeriesInTSformat <- as.ts(x)
+  if(type == 'ct'){
+    int = TRUE 
+    trend = TRUE
+  } else if(type == 'c'){
+    int = TRUE
+    trend = FALSE
+  } else if(type == 'nc'){
+    int = FALSE 
+    trend = FALSE
+  } 
+  
+  BIClist <- c(NULL)
+
+  for (i in 1:MaxLag){
+    Model <- CreateModel(TimeSeriesInTSformat, k = i, int, trend)
+    BIClist[i] <- BIC(Model)  
+  }
+  
+  if(plotBIC){plot(BIClist)}
+  
+  FinalModel <- CreateModel(TimeSeriesInTSformat, 
+                            k = which.min(BIClist), int, trend, 
+                            printModel = TRUE)
+  
+
+  print(summary(FinalModel)$coefficients)
+  fUnitRoots::adfTest(GASPOOLpriceXTS, 
+                      lags = which.min(BIClist), 
+                      type = type)
+  
+}
+
+########################################################
+
+GASPOOLpriceTS <- TSstudio::xts_to_ts(GASPOOLpriceXTS )
+plot(GASPOOLpriceTS)
+
+ADFUnitRoot(GASPOOLpriceTS, 
+            MaxLag = 20, 
+            type = "c", 
+            plotBIC = TRUE)
+
+
+
+
