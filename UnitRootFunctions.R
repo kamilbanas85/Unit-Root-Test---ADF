@@ -53,11 +53,9 @@ ADFUnitRoot <- function(x,
                             k = which.min(BIClist), int, trend, 
                             printModel = TRUE)
   
-
+  # Print information about fitted model and make Unit Root test
   print(summary(FinalModel)$coefficients)
-  fUnitRoots::adfTest(GASPOOLpriceXTS, 
-                      lags = which.min(BIClist), 
-                      type = type)
+  fUnitRoots::adfTest(TimeSeriesInTSformat, lags = which.min(BIClist), type = type)
   
 }
 
@@ -70,7 +68,7 @@ ADFUnitRoot(TmieSeries,
             MaxLag = 20, 
             type = "ct", 
             plotBIC = TRUE)
-
+# type: 'ct' - const and trend, 'c' - constant, 'nc' - no constant
 
 
 
