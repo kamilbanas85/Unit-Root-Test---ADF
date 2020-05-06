@@ -1,10 +1,10 @@
 install.packages('fUnitRoots')
-
+install.packages('dynlm')
+library(dynlm)
 
 
 CreateModel <- function(x, k = 0, int = TRUE, trend = FALSE, printModel = FALSE){
   # NB:  returns conventional lm summary so p-values for adf test are wrong!
-  require(dynlm)
   dx <- diff(x)
   formula <- paste("dx ~ L(x)")
   if(k > 0)
@@ -27,7 +27,6 @@ ADFUnitRoot <- function(x,
                         type = "ct", 
                         plotBIC = TRUE){
   
-
   TimeSeriesInTSformat <- as.ts(x)
   if(type == 'ct'){
     int = TRUE 
