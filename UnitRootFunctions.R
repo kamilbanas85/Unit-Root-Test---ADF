@@ -63,12 +63,12 @@ ADFUnitRoot <- function(x,
 
 ########################################################
 
-GASPOOLpriceTS <- TSstudio::xts_to_ts(GASPOOLpriceXTS )
-plot(GASPOOLpriceTS)
+TmieSeries <- TSstudio::xts_to_ts(TmieSeries )
+plot(TmieSeries)
 
-ADFUnitRoot(GASPOOLpriceTS, 
+ADFUnitRoot(TmieSeries, 
             MaxLag = 20, 
-            type = "c", 
+            type = "ct", 
             plotBIC = TRUE)
 
 
