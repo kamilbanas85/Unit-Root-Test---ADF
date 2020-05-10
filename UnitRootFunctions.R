@@ -1,11 +1,19 @@
-install.packages('fUnitRoots')
-install.packages('dynlm')
-install.packages('TSstudio')
-library(dynlm)
+listOfPackagesToInstall <- c('fUnitRoots','dynlm','TSstudio','xts')
 
+InstallRequiredPackages <- function(x){
+  if(!(x %in% installed.packages()[,"Package"])){
+    install.packages(x)
+  }
+}
+  
+invisible(lapply(listOfPackagesToInstall, InstallRequiredPackages))
 
-CreateModel <- function(x, k = 0, int = TRUE, trend = FALSE, printModel = FALSE){
+###############
+
+CreateModel <- function(x, k = 0, 
+                        int = TRUE, trend = FALSE, printModel = FALSE){
   # NB:  returns conventional lm summary so p-values for adf test are wrong!
+
   dx <- diff(x)
   formula <- paste("dx ~ L(x)")
   if(k > 0)
@@ -18,17 +26,28 @@ CreateModel <- function(x, k = 0, int = TRUE, trend = FALSE, printModel = FALSE)
   if(!int) formula <- paste0(formula," - 1")
   
   if(printModel){print(formula)}
-  dynlm(as.formula(formula))
+  
+  dynlm::dynlm(as.formula(formula))
 }
 
-########################################################
+###############
 
-ADFUnitRoot <- function(x, 
-                        MaxLag = 10, 
-                        type = "ct", 
-                        plotBIC = TRUE){
+ADFUnitRoot <- function(TimeSeries, 
+                        type = 'ct', 
+                        LagsNumber = 10,
+                        selectlags = c("Fixed", "AIC", "BIC")){
   
-  TimeSeriesInTSformat <- as.ts(x)
+  if('data.frame' %in% class(TimeSeries) ){
+    TimeSeriesInXTSformat <- xts::xts(TimeSeries[,2], 
+                                     order.by=TimeSeries[,1])
+    TimeSeriesInTSformat <- TSstudio::xts_to_ts(TimeSeriesInXTSformat)
+  } else if('ts' %in% class(TimeSeries)){
+      TimeSeriesInTSformat <- TimeSeries
+  } else if('xts' %in% class(TimeSeries)){
+    TimeSeriesInTSformat <- TSstudio::xts_to_ts(TimeSeries)
+  }
+    
+
   if(type == 'ct'){
     int = TRUE 
     trend = TRUE
@@ -40,35 +59,54 @@ ADFUnitRoot <- function(x,
     trend = FALSE
   } 
   
-  BIClist <- c(NULL)
+  if(selectlags == 'AIC' | selectlags == 'BIC'){
 
-  for (i in 1:MaxLag){
-    Model <- CreateModel(TimeSeriesInTSformat, k = i, int, trend)
-    BIClist[i] <- BIC(Model)  
+      LagsTestlist <- c(NULL)
+
+      for (i in 1:LagsNumber){
+        Model <- CreateModel(TimeSeriesInTSformat, k = i, int, trend)
+        
+        if(selectlags == 'BIC'){
+          LagsTestlist[i] <- BIC(Model)  
+        } else if (selectlags == 'AIC'){
+          LagsTestlist[i] <- AIC(Model)  
+        }
+      }
+  
+      plot(LagsTestlist,  main = "Lags Length Test",
+            xlab = "Lag Number",
+            ylab = selectlags)
   }
-  
-  if(plotBIC){plot(BIClist)}
-  
+    
+  FinallLagsNumber <- if (selectlags == 'Fixed') 
+                        {LagsNumber}
+                      else if(selectlags == 'BIC' | selectlags == 'AIC' )
+                        {which.min(LagsTestlist)}
+    
   FinalModel <- CreateModel(TimeSeriesInTSformat, 
-                            k = which.min(BIClist), int, trend, 
+                            k = FinallLagsNumber, int, trend, 
                             printModel = TRUE)
   
-  # Print information about fitted model and make Unit Root test
   print(summary(FinalModel)$coefficients)
-  fUnitRoots::adfTest(TimeSeriesInTSformat, lags = which.min(BIClist), type = type)
-  
+  fUnitRoots::adfTest(TimeSeriesInTSformat, 
+                      lags = FinallLagsNumber, 
+                      type = type)
+
 }
 
 ########################################################
+########################################################
 
-TmieSeries <- TSstudio::xts_to_ts(TmieSeries )
-plot(TmieSeries)
+# ADFUnitRoot(TimeSeries, 
+#   type = c('nc','c','ct'), 
+#   selectlags = c("Fixed", "AIC", "BIC"),
+#   LagsNumber = 10)
 
-ADFUnitRoot(TmieSeries, 
-            MaxLag = 20, 
-            type = "ct", 
-            plotBIC = TRUE)
 # type: 'ct' - const and trend, 'c' - constant, 'nc' - no constant
+# LagsNumber - means max lags if selectlags = 'AIC' or 'BIC'  
 
-
-
+# Example:
+# ADFUnitRoot(TimeSeries, 
+#   type = 'ct', 
+#   selectlags = "BIC",
+#   LagsNumber = 20)
