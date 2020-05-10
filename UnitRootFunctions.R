@@ -37,7 +37,7 @@ ADFUnitRoot <- function(TimeSeries,
                         LagsNumber = 10,
                         selectlags = c("Fixed", "AIC", "BIC")){
   
-  # Conver TimeSeries format to 'ts'
+  # Converts TimeSeries format to 'ts'
   if('data.frame' %in% class(TimeSeries) ){
     TimeSeriesInXTSformat <- xts::xts(TimeSeries[,2], 
                                      order.by=TimeSeries[,1])
