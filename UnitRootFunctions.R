@@ -1,113 +1,82 @@
-listOfPackagesToInstall <- c('fUnitRoots','dynlm','TSstudio','xts')
+listOfPackagesToInstall <- c('urca','erer','zoo','gridExtra','ggplot2')
 
 InstallRequiredPackages <- function(x){
+  
   if(!(x %in% installed.packages()[,"Package"])){
     install.packages(x)
   }
 }
-  
+
 invisible(lapply(listOfPackagesToInstall, InstallRequiredPackages))
+require(ggplot2)
 
-###############
-
-CreateModel <- function(x, k = 0, 
-                        int = TRUE, trend = FALSE, printModel = FALSE){
-  # NB:  returns conventional lm summary so p-values for adf test are wrong!
-
-  dx <- diff(x)
-  formula <- paste("dx ~ L(x)")
-  if(k > 0)
-    formula <- paste0(formula," + L(dx,1:",k,")")
-  if(trend){
-    s <- time(x)
-    t <- ts(s - s[1],start = s[1],freq = frequency(x))
-    formula <- paste0(formula," + t")
-  }
-  if(!int) formula <- paste0(formula," - 1")
-  
-  if(printModel){print(formula)}
-  
-  dynlm::dynlm(as.formula(formula))
-}
-
-###############
+########################################################
 
 ADFUnitRoot <- function(TimeSeries, 
-                        type = 'ct', 
+                        type = 'trend', 
                         LagsNumber = 10,
-                        selectlags = c("Fixed", "AIC", "BIC")){
+                        selectlags = "BIC"){
   
-  # Converts TimeSeries format to 'ts'
-  if('data.frame' %in% class(TimeSeries) ){
-    TimeSeriesInXTSformat <- xts::xts(TimeSeries[,2], 
-                                     order.by=TimeSeries[,1])
-    TimeSeriesInTSformat <- TSstudio::xts_to_ts(TimeSeriesInXTSformat)
-  } else if('ts' %in% class(TimeSeries)){
-      TimeSeriesInTSformat <- TimeSeries
-  } else if('xts' %in% class(TimeSeries)){
-    TimeSeriesInTSformat <- TSstudio::xts_to_ts(TimeSeries)
-  }
-    
-
-  if(type == 'ct'){
-    int = TRUE 
-    trend = TRUE
-  } else if(type == 'c'){
-    int = TRUE
-    trend = FALSE
-  } else if(type == 'nc'){
-    int = FALSE 
-    trend = FALSE
-  } 
+  # type = ('none','drift','trent')
+  # selectlags = c("Fixed", "AIC", "BIC")
   
   if(selectlags == 'AIC' | selectlags == 'BIC'){
+    
+    LagsAICtestList <- matrix(ncol=2, nrow=LagsNumber)
+    LagsBICtestList <- matrix(ncol=2, nrow=LagsNumber)
+    
+    for (i in 1:LagsNumber){
+      
+      ModelForAICandBIC <- erer::ur.df2(TimeSeries, 
+                                        type = type, 
+                                        lags = i, 
+                                        selectlags = 'Fixed')
+      
+      LagsAICtestList[i,1] <- i
+      LagsAICtestList[i,2] <- ModelForAICandBIC$aic
+      LagsBICtestList[i,1] <- i
+      LagsBICtestList[i,2] <- ModelForAICandBIC$bic
+    }
+    
+    LagsAICtestList <- data.frame(LagsAICtestList)
+    LagsBICtestList <- data.frame(LagsBICtestList)
+    names(LagsAICtestList) <- c('Lag_Number','AIC')
+    names(LagsBICtestList) <- c('Lag_Number','BIC')
 
-      LagsTestlist <- c(NULL)
-
-      for (i in 1:LagsNumber){
-        Model <- CreateModel(TimeSeriesInTSformat, k = i, int, trend)
-        
-        if(selectlags == 'BIC'){
-          LagsTestlist[i] <- BIC(Model)  
-        } else if (selectlags == 'AIC'){
-          LagsTestlist[i] <- AIC(Model)  
-        }
-      }
-  
-      plot(LagsTestlist,  main = "Lags Length Test",
-            xlab = "Lag Number",
-            ylab = selectlags)
+    plot1 <- ggplot(LagsAICtestList) + geom_line(aes(Lag_Number, AIC))+
+                ggtitle('Lags Length AIC Test') +
+                theme_minimal()
+      
+    plot2 <- ggplot(LagsBICtestList) + geom_line(aes(Lag_Number, BIC))+
+                ggtitle('Lags Length BIC Test') +
+                theme_minimal()
+    
+    gridExtra::grid.arrange(plot1, plot2, ncol=2)
   }
-    
-  FinallLagsNumber <- if (selectlags == 'Fixed') 
-                        {LagsNumber}
-                      else if(selectlags == 'BIC' | selectlags == 'AIC' )
-                        {which.min(LagsTestlist)}
-    
-  FinalModel <- CreateModel(TimeSeriesInTSformat, 
-                            k = FinallLagsNumber, int, trend, 
-                            printModel = TRUE)
   
-  print(summary(FinalModel)$coefficients)
-  fUnitRoots::adfTest(TimeSeriesInTSformat, 
-                      lags = FinallLagsNumber, 
-                      type = type)
-
+  FinalModel <- urca::ur.df(TimeSeries, 
+                            type = type, 
+                            lags = LagsNumber, 
+                            selectlags = selectlags)
+  
+  print(urca::summary(FinalModel))
+  invisible(FinalModel)
 }
 
 ########################################################
 ########################################################
 
 # ADFUnitRoot(TimeSeries, 
-#   type = c('nc','c','ct'), 
-#   selectlags = c("Fixed", "AIC", "BIC"),
+#   type = c('none','drift','trend'), 
+#   selectlags = c("Fixed", "AIC", "BIC")
 #   LagsNumber = 10)
 
-# type: 'ct' - const and trend, 'c' - constant, 'nc' - no constant
-# LagsNumber - means max lags if selectlags = 'AIC' or 'BIC'  
+# type: 'trent' - const and trend, 'drift' - constant, 'none' - no constant
+# selectlags - method to select lags number
+# LagsNumber - max lags if selectlags = 'AIC' or 'BIC' or lags number if 'Fixed' 
 
 # Example:
 # ADFUnitRoot(TimeSeries, 
-#   type = 'ct', 
+#   type = 'drift', 
 #   selectlags = "BIC",
 #   LagsNumber = 20)
