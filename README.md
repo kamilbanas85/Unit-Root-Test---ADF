@@ -8,6 +8,7 @@ Therefore a statistical test to check significance of some coefficient can be ma
 When the null hypothesis holds the t coefficient doesn’t follow a normal distribution, so we can’t use the usual t test (ftp://ftp.repec.org/opt/ReDIF/RePEc/ers/papers/02_34_p3.pdf, https://www.real-statistics.com/time-series-analysis/stochastic-processes/dickey-fuller-test/).
 
 Function urca::ur.df has special test to check significance of constant and trend coefficients:  
+https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-fuller-unit-root-test-results
 
 "trend": 
 
