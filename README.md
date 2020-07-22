@@ -14,7 +14,8 @@ Function urca::ur.df has special test to check significance of constant and tren
 
 "trend": 
 
-$$x=\sqrt{2}$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma y_{t-1} + a_2 t + e_t" /></a>
+
 
 Δ yt=a0+γ∗yt−1+a2t+et
 
