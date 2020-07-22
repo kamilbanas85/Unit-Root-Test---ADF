@@ -1,3 +1,6 @@
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+
 # Unit-Root-Test---ADF
 
 ADF Unit Root test, based on **urca::ur.df**
@@ -11,7 +14,9 @@ Function urca::ur.df has special test to check significance of constant and tren
 
 "trend": 
 
-$$Δ yt=a0+γ∗yt−1+a2t+et $$
+$$x=\sqrt{2}$$
+
+Δ yt=a0+γ∗yt−1+a2t+et
 
 
 (where a2t
