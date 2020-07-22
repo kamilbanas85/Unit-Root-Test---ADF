@@ -17,9 +17,9 @@ https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-ful
 
 (where a2t
 is a time trend term) The hypotheses (from Enders p. 208) are as follows:
-tau: γ=0
-phi3: γ=a2=0
-phi2: a0=γ=a2=0
+tau: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+phi3: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
+phi2: <a href="https://www.codecogs.com/eqnedit.php?latex=a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" title="a_0 = \gamma = a_2 = 0" /></a>
 
 
 "drift" 
