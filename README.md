@@ -1,6 +1,6 @@
 # Unit-Root-Test---ADF
 
-ADF Unit Root test, based on urca::ur.df
+ADF Unit Root test, based on **urca::ur.df**
 
 Deciding  which  case of test  to  use (none, drift, trend)  involves  a  combination  of  theory  and  visual  inspection  of  the  data (https://www.stata.com/manuals13/tsdfuller.pdf).
 Hoevever, when some trend appear in data, it can be drift of trend, somethimes difficult to distingush. 
