@@ -55,7 +55,8 @@
 
 
 
-   ## Number of Lags is chosen based on  (https://www.econometrics-with-r.org/14-6-llsuic.html):
+   ## Number of Lags is chosen based on:
+      (https://www.econometrics-with-r.org/14-6-llsuic.html)
       * BIC or AIC.
       * Test the significance of the largest lag.
 
