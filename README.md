@@ -19,6 +19,7 @@ The hypothesis is:
 
 tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
 "trend": 
 
