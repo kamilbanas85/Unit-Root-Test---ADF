@@ -10,6 +10,16 @@ When the null hypothesis holds the t coefficient doesn’t follow a normal distr
 Function urca::ur.df has special test to check significance of constant and trend coefficients:  
 https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-fuller-unit-root-test-results
 
+
+"none"
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = \gamma \cdot y_{t-1} + e_t" /></a>
+
+The hypothesis is:
+
+tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+
+
 "trend": 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + a_2 t + e_t" /></a>
@@ -31,9 +41,7 @@ phi2: <a href="https://www.codecogs.com/eqnedit.php?latex=a_0&space;=&space;\gam
 
 
 
-"none"
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = \gamma \cdot y_{t-1} + e_t" /></a>
 
 
 
