@@ -14,16 +14,15 @@
 
      The hypothesis is:
 
-     tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0"  title="\gamma = 0" /></a>
+     * tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0"  title="\gamma = 0" /></a>
 
-    ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
+       ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
 
-    For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
+       For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
 
-    Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
+       Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
 
-    <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
-
+       <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
 
 
  * ## "drift": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
