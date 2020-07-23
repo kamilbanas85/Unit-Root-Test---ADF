@@ -49,6 +49,8 @@
       * phi3:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
       * phi2:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" title="a_0 = \gamma = a_2 = 0" /></a>
+ 
+        phi2 is also right tailed, so: &nbsp; &nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" title="Cr_{10%} < Cr_{5%} < Cr_{1%}" /></a>
 
 
 
