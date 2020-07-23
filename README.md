@@ -28,7 +28,7 @@
 
  * ## "drift": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
 
-     The Hypothesis:
+     The Hypotheses:
      * tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
      * phi1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
@@ -46,7 +46,7 @@
  * ## "trend": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + a_2 t + e_t" /></a>
 
 
-      The Hypothesis:
+      The Hypotheses:
       * tau: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
       * phi3: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
