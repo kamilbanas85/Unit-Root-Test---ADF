@@ -28,20 +28,20 @@
 
  * ## "drift": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
 
-  The Hypothesis:
-  * tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+     The Hypothesis:
+     * tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
-  * phi1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
+     * phi1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
-  phi1 is right tailed test, so: 
+       phi1 is right tailed test, so: 
 
-  <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" title="Cr_{10%} < Cr_{5%} < Cr_{1%}" /></a>
+       <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" title="Cr_{10%} < Cr_{5%} < Cr_{1%}" /></a>
 
-  Therefore value of test statistic sholud be less then critical value to support null hypothesis:
+       Therefore value of test statistic sholud be less then critical value to support null hypothesis:
 
-  <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Test&space;Statistic&space;Value}&space;\&space;<&space;\&space;Cr&space;\quad&space;\Rightarrow&space;\quad&space;\textrm{Null&space;Hypothesis&space;is&space;True}\&space;(\gamma&space;=&space;a_2&space;=&space;0\&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Test&space;Statistic&space;Value}&space;\&space;<&space;\&space;Cr&space;\quad&space;\Rightarrow&space;\quad&space;\textrm{Null&space;Hypothesis&space;is&space;True}\&space;(\gamma&space;=&space;a_2&space;=&space;0\&space;)" title="\textrm{Test Statistic Value} \ < \ Cr \quad \Rightarrow \quad \textrm{Null Hypothesis is True}\ (\gamma = a_2 = 0\ )" /></a>
+       <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Test&space;Statistic&space;Value}&space;\&space;<&space;\&space;Cr&space;\quad&space;\Rightarrow&space;\quad&space;\textrm{Null&space;Hypothesis&space;is&space;True}\&space;(\gamma&space;=&space;a_2&space;=&space;0\&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Test&space;Statistic&space;Value}&space;\&space;<&space;\&space;Cr&space;\quad&space;\Rightarrow&space;\quad&space;\textrm{Null&space;Hypothesis&space;is&space;True}\&space;(\gamma&space;=&space;a_2&space;=&space;0\&space;)" title="\textrm{Test Statistic Value} \ < \ Cr \quad \Rightarrow \quad \textrm{Null Hypothesis is True}\ (\gamma = a_2 = 0\ )" /></a>
 
-  When the phi1 test support Null Hypothesis, then it is unit root and drift coeffiient is insignificant, so formulation is inappopriate. If Null Hypothesis is rejected, than  on of coefficient or both are non zero.
+       When the phi1 test support Null Hypothesis, then it is unit root and drift coefficient is insignificant, so formulation is inappropriate. If Null Hypothesis is rejected, than  one of coefficient or both are non zero.
 
  * ## "trend": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + a_2 t + e_t" /></a>
 
