@@ -1,28 +1,28 @@
 # Unit-Root-Test---ADF
 
-  ADF Unit Root test, based on **urca::ur.df**
+   ADF Unit Root test, based on **urca::ur.df**
 
-  Deciding  which  case of test  to  use (none, drift, trend)  involves  a  combination  of  theory  and  visual  inspection  of  the  data (https://www.stata.com/manuals13/tsdfuller.pdf).
-  However, when some trend appear in data, it can be drift of trend, sometimes difficult to distinguish.
-  Therefore a statistical test to check significance of some coefficient can be made.
-  When the null hypothesis holds the t coefficient doesn’t follow a normal distribution, so we can’t use the usual t test (ftp://ftp.repec.org/opt/ReDIF/RePEc/ers/papers/02_34_p3.pdf, https://www.real-statistics.com/time-series-analysis/stochastic-processes/dickey-fuller-test/).
+   Deciding  which  case of test  to  use (none, drift, trend)  involves  a  combination  of  theory  and  visual  inspection  of  the  data (https://www.stata.com/manuals13/tsdfuller.pdf).
+   However, when some trend appear in data, it can be drift of trend, sometimes difficult to distinguish.
+   Therefore a statistical test to check significance of some coefficient can be made.
+   When the null hypothesis holds the t coefficient doesn’t follow a normal distribution, so we can’t use the usual t test (ftp://ftp.repec.org/opt/ReDIF/RePEc/ers/papers/02_34_p3.pdf, https://www.real-statistics.com/time-series-analysis/stochastic-processes/dickey-fuller-test/).
 
-  Function urca::ur.df has special test to check significance of constant and trend coefficients:  
-  https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-fuller-unit-root-test-results
+   Function urca::ur.df has special test to check significance of constant and trend coefficients:  
+   https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-fuller-unit-root-test-results
 
  * ## "none":    <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = \gamma \cdot y_{t-1} + e_t" /></a>
 
-  The hypothesis is:
+     The hypothesis is:
 
-  tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+     tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0"  title="\gamma = 0" /></a>
 
-  ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
+    ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
 
-  For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
+    For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
 
-  Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
+    Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
 
-  <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
+    <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
 
 
 
