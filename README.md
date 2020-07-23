@@ -23,7 +23,8 @@ tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0
 
 For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
 
-Therefore value of test statistic sholud be grater then critical value to support null hypothesis.
+Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
 
 
