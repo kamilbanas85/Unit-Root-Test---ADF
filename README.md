@@ -14,7 +14,7 @@
 
      The hypothesis is:
 
-     * tau1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0"  title="\gamma = 0" /></a>
+     * tau1:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0"  title="\gamma = 0" /></a>
 
        ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
 
@@ -28,9 +28,9 @@
  * ## "drift":&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
 
      The Hypotheses:
-     * tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+     * tau2:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
-     * phi1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
+     * phi1:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
        phi1 is right tailed test, so: 
 
@@ -46,11 +46,11 @@
 
 
       The Hypotheses:
-      * tau: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
+      * tau:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
 
-      * phi3: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
+      * phi3:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
-      * phi2: <a href="https://www.codecogs.com/eqnedit.php?latex=a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" title="a_0 = \gamma = a_2 = 0" /></a>
+      * phi2:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a_0&space;=&space;\gamma&space;=&space;a_2&space;=&space;0" title="a_0 = \gamma = a_2 = 0" /></a>
 
 
 
