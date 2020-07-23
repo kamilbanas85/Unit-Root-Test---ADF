@@ -10,7 +10,7 @@
    Function urca::ur.df has special test to check significance of constant and trend coefficients:  
    https://stats.stackexchange.com/questions/24072/interpreting-rs-ur-df-dickey-fuller-unit-root-test-results
 
- * ## "none":    <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = \gamma \cdot y_{t-1} + e_t" /></a>
+ * ## "none":&nbsp; &nbsp;   <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = \gamma \cdot y_{t-1} + e_t" /></a>
 
      The hypothesis is:
 
@@ -25,7 +25,7 @@
        <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
 
 
- * ## "drift": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
+ * ## "drift":&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
 
      The Hypotheses:
      * tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;0" title="\gamma = 0" /></a>
@@ -42,7 +42,7 @@
 
        When the phi1 test support Null Hypothesis, then it is unit root and drift coefficient is insignificant, so formulation is inappropriate. If Null Hypothesis is rejected, than  one of coefficient or both are non zero.
 
- * ## "trend": <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + a_2 t + e_t" /></a>
+ * ## "trend":&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;a_2&space;t&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + a_2 t + e_t" /></a>
 
 
       The Hypotheses:
