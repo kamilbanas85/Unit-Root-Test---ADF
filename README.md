@@ -37,6 +37,7 @@ tau2: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;0
 
 phi1: <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
+phi1 is right tailed test, so: 
 
 "trend": 
 
