@@ -18,7 +18,7 @@
 
        ![Left Tailed Test](https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Critical_Values.jpg)
 
-       For Left Tailed Test: <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
+       For Left Tailed Test:&nbsp; &nbsp;  <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{1%}&space;<&space;Cr_{5%}&space;<&space;Cr_{10%}" title="Cr_{1%} < Cr_{5%} < Cr_{10%}" /></a>
 
        Therefore value of test statistic sholud be grater then critical value to support null hypothesis:
 
@@ -32,9 +32,7 @@
 
      * phi1:&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma&space;=&space;a_2&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma&space;=&space;a_2&space;=&space;0" title="\gamma = a_2 = 0" /></a>
 
-       phi1 is right tailed test, so: 
-
-       <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" title="Cr_{10%} < Cr_{5%} < Cr_{1%}" /></a>
+       phi1 is right tailed test, so: &nbsp; &nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr_{10%}&space;<&space;Cr_{5%}&space;<&space;Cr_{1%}" title="Cr_{10%} < Cr_{5%} < Cr_{1%}" /></a>
 
        Therefore value of test statistic should be less then critical value to support null hypothesis:
 
