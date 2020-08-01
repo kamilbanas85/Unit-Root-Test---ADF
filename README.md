@@ -1,5 +1,8 @@
 # Unit-Root-Test---ADF
-
+   Examples:  
+   https://htmlpreview.github.io/?https://github.com/kamilbanas85/Unit-Root-Test---ADF/blob/master/Unit_Root_Examples.html 
+   <br /> <br />
+   
    ADF Unit Root test, based on **urca::ur.df**
 
    Deciding  which  case of test  to  use (none, drift, trend)  involves  a  combination  of  theory  and  visual  inspection  of  the  data (https://www.stata.com/manuals13/tsdfuller.pdf).
