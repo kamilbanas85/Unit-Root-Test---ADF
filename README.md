@@ -24,7 +24,7 @@
 
        <a href="https://www.codecogs.com/eqnedit.php?latex=Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cr&space;\&space;<&space;\&space;\textrm{Test&space;Statistic&space;Value}&space;\qquad&space;\Rightarrow&space;\qquad&space;\textrm{Null&space;Hypothesis&space;is&space;True&space;(The&space;presence&space;of&space;Unit&space;Root)}" title="Cr \ < \ \textrm{Test Statistic Value} \qquad \Rightarrow \qquad \textrm{Null Hypothesis is True (The presence of Unit Root)}" /></a>
        
-       **In general: |Test_statistic_val| > |critical_value|  =>  null rejected**
+       **In general:  |critical_value| < |Test_statistic_val| =>  null rejected**
 
 
  * ## "drift":&nbsp;&nbsp; <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;y_t&space;=&space;a_0&space;&plus;&space;\gamma&space;\cdot&space;y_{t-1}&space;&plus;&space;e_t" title="\Delta y_t = a_0 + \gamma \cdot y_{t-1} + e_t" /></a>
